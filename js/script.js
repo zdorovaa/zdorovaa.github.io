@@ -1,6 +1,6 @@
 // Creating map options
 var mapOptions = {
-    center: [44.9482, 34.1003],
+    center: [44.954901, 34.101592],
     zoom: 13
 }
 
@@ -25,6 +25,7 @@ var markerOptions = {
 
 // Creating a marker
 var cfu = L.marker([44.9364, 34.1342], markerOptions);
+var cheel = L.marker([44.946384, 34.098083], markerOptions);
 var work = L.marker([44.948174, 34.102267], markerOptions);
 var rectal = L.marker([45.006412, 34.055088], markerOptions);
 
@@ -38,10 +39,12 @@ var vodohranka = L.polygon([
 // Adding marker to the map
 cfu.addTo(map);
 work.addTo(map);
+cheel.addTo(map);
 rectal.addTo(map);
 vodohranka.addTo(map);
 
 // Adding pop-up to the marker
+cheel.bindPopup('Какой-то пакр');
 cfu.bindPopup('КФУ им. В.И. Вернадского');
 work.bindPopup('Рабочая плантация');
 rectal.bindPopup('Военная кафедра');
