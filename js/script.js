@@ -8,10 +8,7 @@ var mapOptions = {
 var map = new L.map('map', mapOptions);
 
 // Creating a Layer object
-var layer = L.tileLayer('http://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png', {
-    maxZoom: 18,
-    attribution: '&copy; <a href="https://vk.com/a.zdorov">Здоров Андрей</a>'
-});
+var layer = L.tileLayer('http://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png');
 
 // Adding layer to the map
 map.addLayer(layer);
@@ -26,7 +23,7 @@ var markerOptions = {
 // Creating a marker
 var cfu = L.marker([44.9364, 34.1342], markerOptions);
 var cheel = L.marker([44.946384, 34.098083], markerOptions);
-var work = L.marker([44.948174, 34.102267], markerOptions);
+var shava = L.marker([44.973431, 34.134666], markerOptions);
 var rectal = L.marker([45.006412, 34.055088], markerOptions);
 
 var vodohranka = L.polygon([    
@@ -38,7 +35,7 @@ var vodohranka = L.polygon([
 
 // Adding marker to the map
 cfu.addTo(map);
-work.addTo(map);
+shava.addTo(map);
 cheel.addTo(map);
 rectal.addTo(map);
 vodohranka.addTo(map);
@@ -46,6 +43,6 @@ vodohranka.addTo(map);
 // Adding pop-up to the marker
 cheel.bindPopup('Какой-то пакр');
 cfu.bindPopup('КФУ им. В.И. Вернадского');
-work.bindPopup('Рабочая плантация');
+shava.bindPopup('Вкусная шава');
 rectal.bindPopup('Военная кафедра');
 vodohranka.bindPopup('Водохранка, но ее скоро не будет');
